@@ -7,5 +7,5 @@ RUN mvn clean package
 
 # Stage 2: Deploy to WildFly
 FROM quay.io/wildfly/wildfly:37.0.0.Final-jdk17
-COPY --from=builder /app/target/rest-app.war /opt/jboss/wildfly/standalone/deployments/rest-app.war
+COPY --from=builder /app/target/jsf-app.war /opt/jboss/wildfly/standalone/deployments/jsf-app.war
 EXPOSE 8080

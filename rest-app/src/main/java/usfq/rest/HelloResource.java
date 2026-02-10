@@ -14,6 +14,6 @@ public class HelloResource {
     @PermitAll
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "Hello World";
+        return "Hello World 123";
     }
 }
