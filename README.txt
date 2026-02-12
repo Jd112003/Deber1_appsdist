@@ -6,7 +6,7 @@ Semestre: 202520 - Segundo Semestre 2025/2026
 
 INTEGRANTES DEL GRUPO:
 ----------------------
-- [Nombre Integrante 1] - Desarrollo de la aplicación REST (backend)
+- Matias Jaramillo (00326063) - Desarrollo de la aplicación REST (backend)
 - [Nombre Integrante 2] - Desarrollo de la aplicación JSF (frontend) y configuración de Docker
 
 DESCRIPCIÓN DEL PROYECTO:
