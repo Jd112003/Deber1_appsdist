@@ -59,17 +59,17 @@ OPCIÓN 2: Descargar desde Docker Hub
 -------------------------------------
 
 1. Descargar las imágenes desde Docker Hub:
-   docker pull [USUARIO_DOCKERHUB]/rest-app:latest
-   docker pull [USUARIO_DOCKERHUB]/jsf-app:latest
+   docker pull matjaramillo/rest-app:latest
+   docker pull matjaramillo/jsf-app:latest
 
 2. Crear una red Docker:
    docker network create app-network
 
 3. Ejecutar el contenedor REST primero:
-   docker run -d --name rest-app-container --network app-network -p 8081:8080 [USUARIO_DOCKERHUB]/rest-app:latest
+   docker run -d --name rest-app-container --network app-network -p 8081:8080 matjaramillo/rest-app:latest
 
 4. Esperar a que el contenedor REST esté listo (aprox. 30-40 segundos), luego ejecutar el contenedor JSF:
-   docker run -d --name jsf-app-container --network app-network -p 8082:8080 [USUARIO_DOCKERHUB]/jsf-app:latest
+   docker run -d --name jsf-app-container --network app-network -p 8082:8080 matjaramillo/jsf-app:latest
 
 5. Acceder a la aplicación:
    - Abrir el navegador en: http://localhost:8082/jsf-app/
@@ -143,7 +143,7 @@ Si la aplicación JSF no puede conectarse al servicio REST:
 
 ENLACES DE DOCKER HUB:
 ----------------------
-- REST Application: [COMPLETAR CON URL DE DOCKER HUB]
-- JSF Application: [COMPLETAR CON URL DE DOCKER HUB]
+- REST Application: https://hub.docker.com/repository/docker/matjaramillo/rest-app/general
+- JSF Application: https://hub.docker.com/repository/docker/matjaramillo/jsf-app/general
 
 ================================================================================
