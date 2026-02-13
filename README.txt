@@ -7,7 +7,7 @@ Semestre: 202520 - Segundo Semestre 2025/2026
 INTEGRANTES DEL GRUPO:
 ----------------------
 - Matias Jaramillo (00326063) - Desarrollo de la aplicación REST (backend)
-- [Nombre Integrante 2] - Desarrollo de la aplicación JSF (frontend) y configuración de Docker
+- Juan Diego Chicaiza (00328175) - Desarrollo de la aplicación JSF (frontend) y configuración de Docker
 
 DESCRIPCIÓN DEL PROYECTO:
 -------------------------
@@ -121,6 +121,31 @@ ENDPOINTS DISPONIBLES:
 ---------------------
 - Aplicación JSF: http://localhost:8082/jsf-app/
 - API REST: http://localhost:8081/rest-app/api/hello
+
+
+ROLES Y CONTRIBUCIONES DEL EQUIPO:
+---------------------------------
+
+Matías Jaramillo (00326063) – Backend (REST) y Documentación
+	•	Diseño e implementación de la aplicación REST utilizando Jakarta EE 10.
+	•	Creación del endpoint /api/hello que retorna el mensaje "Hello World 123".
+	•	Configuración de RestApplication.java y HelloResource.java.
+	•	Configuración del proyecto Maven (estructura WAR y dependencias).
+	•	Contenerización de la aplicación REST con Docker (WildFly 37.0.0.Final).
+	•	Verificación de compatibilidad multi-arquitectura (ARM64 y AMD64).
+	•	Publicación de la imagen Docker en Docker Hub.
+	•	Pruebas de funcionamiento del servicio REST tanto localmente como en contenedor.
+	•	Incluir datos del archivo README.txt.
+
+Juan Diego Chicaiza (00328175) – Frontend (JSF) y Orquestación con Docker
+	•	Diseño e implementación de la aplicación JSF utilizando Jakarta EE 10.
+	•	Desarrollo de la interfaz index.xhtml.
+	•	Implementación del HelloBean para consumir el servicio REST mediante petición HTTP.
+	•	Configuración de CDI (beans.xml) y web.xml.
+	•	Contenerización de la aplicación JSF con Docker (WildFly 37.0.0.Final).
+	•	Configuración de docker-compose.yml para orquestar ambos contenedores.
+	•	Implementación de depends_on, red Docker compartida y healthcheck.
+	•	Pruebas de integración entre contenedor REST y contenedor JSF.
 
 
 NOTAS TÉCNICAS:
