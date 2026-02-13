@@ -31,7 +31,7 @@ OPCIÓN 1: Construir localmente desde el código fuente
 ------------------------------------------------------
 
 1. Clonar el repositorio:
-   git clone [URL_DEL_REPOSITORIO]
+   git clone https://github.com/Jd112003/Deber1_appsdist.git
    cd Deber1_appsdist
 
 2. Compilar ambas aplicaciones con Maven:
