@@ -1,8 +1,6 @@
 services:
   rest-app:
-    build:
-      context: ./rest-app
-      dockerfile: Dockerfile
+    image: matjaramillo/rest-app:1.0
     container_name: rest-app-container
     ports:
       - "8081:8080"
@@ -16,9 +14,7 @@ services:
       start_period: 40s
 
   jsf-app:
-    build:
-      context: ./jsf-app
-      dockerfile: Dockerfile
+    image: matjaramillo/jsf-app:1.0
     container_name: jsf-app-container
     ports:
       - "8082:8080"

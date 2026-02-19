@@ -34,44 +34,10 @@ OPCIÓN 1: Construir localmente desde el código fuente
    git clone https://github.com/Jd112003/Deber1_appsdist.git
    cd Deber1_appsdist
 
-2. Compilar ambas aplicaciones con Maven:
-   
-   # Compilar la aplicación REST
-   cd rest-app
-   mvn clean package
-   cd ..
-   
-   # Compilar la aplicación JSF
-   cd jsf-app
-   mvn clean package
-   cd ..
+2. Construir y ejecutar los contenedores con Docker Compose:
+   docker-compose up -d --build
 
-3. Construir y ejecutar los contenedores con Docker Compose:
-   docker-compose up --build
-
-4. Acceder a la aplicación:
-   - Abrir el navegador en: http://localhost:8082/jsf-app/
-   - Hacer clic en el botón "Obtener Mensaje del Servidor REST"
-   - El mensaje "Hello World" aparecerá en la página
-
-
-OPCIÓN 2: Descargar desde Docker Hub
--------------------------------------
-
-1. Descargar las imágenes desde Docker Hub:
-   docker pull matjaramillo/rest-app:1.0
-   docker pull matjaramillo/jsf-app:1.0
-
-2. Crear una red Docker:
-   docker network create app-network
-
-3. Ejecutar el contenedor REST primero:
-   docker run -d --name rest-app --network app-network -p 8081:8080 matjaramillo/rest-app:1.0
-
-4. Esperar a que el contenedor REST esté listo (aprox. 30-40 segundos), luego ejecutar el contenedor JSF:
-   docker run -d --name jsf-app-container --network app-network -p 8082:8080 matjaramillo/jsf-app:1.0
-
-5. Acceder a la aplicación:
+3. Acceder a la aplicación:
    - Abrir el navegador en: http://localhost:8082/jsf-app/
    - Hacer clic en el botón "Obtener Mensaje del Servidor REST"
    - El mensaje "Hello World" aparecerá en la página
